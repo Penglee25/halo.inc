@@ -38,6 +38,18 @@ body.offcanvas-menu:before {
   transition: width 0.3s ease;
 }
 
+.bg-blue-shape {
+  width: 120vw;
+  height: 250px;
+  top: 25%;
+  z-index: -1;
+  left: -10vw;
+  position: absolute;
+  transform: rotate(5deg);
+  background: #4d1cff;
+  pointer-events: none;
+}
+
 .left-circles,
 .right-circles,
 .left-circles:after,
@@ -94,6 +106,58 @@ body.offcanvas-menu:before {
   right: 30%;
   position: absolute;
   animation: shapeAnimationOne 20s infinite linear;
+}
+
+.circle-animate {
+  width: 70px;
+  height: 70px;
+  background: #dfdfdfb4;
+  /* Tailwind's sky-500 */
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  animation: float 2s ease-in-out infinite;
+}
+
+.right-shape {
+  width: 20px;
+  aspect-ratio: 1 / cos(30deg);
+  clip-path: polygon(50% 100%, 100% 0, 0 0);
+  background: #e5d8d8;
+  top: 10%;
+  right: 18%;
+  position: absolute;
+  animation: shapeAnimationOne 40s infinite linear;
+}
+
+.left-shape {
+  width: 50px;
+  aspect-ratio: 1;
+  --g: /calc(14.133% + 0.847px) calc(14.133% + 0.847px) radial-gradient(
+      #0000 calc(70% - 1px),
+      #000 calc(71% - 1px) 70%,
+      #0000 71%
+    ) no-repeat;
+  mask: radial-gradient(
+        100% 100%,
+        #0000 calc((14.133% + 0.847px) / 0.334 - 2.996px),
+        #000 calc((14.133% + 0.847px) / 0.334 - 2.996px + 1px)
+      )
+      intersect,
+    100% 50% var(--g), 97.291% 66.235% var(--g), 89.457% 80.711% var(--g),
+    77.347% 91.858% var(--g), 62.274% 98.47% var(--g), 45.871% 99.829% var(--g),
+    29.915% 95.789% var(--g), 16.136% 86.786% var(--g), 6.026% 73.797% var(--g),
+    0.682% 58.23% var(--g), 0.682% 41.77% var(--g), 6.026% 26.203% var(--g),
+    16.136% 13.214% var(--g), 29.915% 4.211% var(--g), 45.871% 0.171% var(--g),
+    62.274% 1.53% var(--g), 77.347% 8.142% var(--g), 89.457% 19.289% var(--g),
+    97.291% 33.765% var(--g);
+  background: #e5d8d8;
+  bottom: 20%;
+  left: 10%;
+  position: absolute;
+  animation: shapeAnimationOne 40s infinite linear;
 }
 
 @keyframes float {

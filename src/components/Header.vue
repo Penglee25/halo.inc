@@ -35,10 +35,10 @@ onUnmounted(() => {
   <header :class="[
     'fixed w-full top-0 left-0 z-50 h-20 transition-all duration-300 ease-in-out',
     isScrolled
-      ? 'bg-[#275fe2a9] shadow-md backdrop-blur-sm'
+      ? 'bg-[#275fe2] shadow-md backdrop-blur-sm'
       : 'bg-transparent']">
     <nav class="container mx-auto px-4 sm:px-6 lg:px-20 mt-3 flex items-center justify-between">
-      <a href="">
+      <a href="/home">
         <img src="../assets/images/halowhite.png" alt="halo" style="width: 120px;">
       </a>
 

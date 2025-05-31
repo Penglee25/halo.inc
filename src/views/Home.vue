@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import mainPhoto from "../assets/images/hero.svg";
+import content from '../data/content';
 
 const items = ref([
   {
@@ -76,89 +77,64 @@ const items = ref([
 
     <div class="container relative mx-auto px-4 sm:px-6 lg:px-20 my-10 text-center py-20" data-aos="fade-up"
       data-aos-duration="1000" id="business">
+
       <h1 class="text-4xl md:text-5xl font-extrabold mb-6 text-gray-800" data-aos="fade-up" data-aos-delay="0">
         Your Business needs End-to-End IT Solutions
       </h1>
       <span class="text-lg">Delivering Tailored, Comprehensive IT Solutions for Mid- to Large Enterprises</span>
 
       <div class="flex justify-evenly gap-2 mt-10">
-        <div
-          class="max-w-sm mx-auto p-4 bg-white/10 backdrop-blur-md rounded-2xl shadow-2xl border border-white/20 transition-transform duration-300">
-          <img src="https://img.icons8.com/fluency/96/security-checked.png" alt="icon"
-            class="mx-auto mb-4 w-20 h-20 object-contain" />
-          <h2 class="text-3xl font-semibold mb-2">Cloud Migration</h2>
-        </div>
-
-        <div
-          class="max-w-sm mx-auto p-4 bg-white/10 backdrop-blur-md rounded-2xl shadow-2xl border border-white/20 transition-transform duration-300">
-          <img src="https://img.icons8.com/fluency/96/security-checked.png" alt="icon"
-            class="mx-auto mb-4 w-20 h-20 object-contain" />
-          <h2 class="text-3xl font-semibold mb-2">Cloud Migration</h2>
-        </div>
-
-        <div
-          class="max-w-sm mx-auto p-4 bg-white/10 backdrop-blur-md rounded-2xl shadow-2xl border border-white/20 transition-transform duration-300">
-          <img src="https://img.icons8.com/fluency/96/security-checked.png" alt="icon"
-            class="mx-auto mb-4 w-20 h-20 object-contain" />
-          <h2 class="text-3xl font-semibold mb-2">Cloud Migration</h2>
+        <div v-for="(data, index) in content.companylogo">
+          <img :src="data.image" :alt="data.text" data-aos="zoom-in" :data-aos-duration="data.animDuration">
         </div>
       </div>
 
     </div>
 
 
+    <div class="relative">
+      <div class="bg-blue-shape"></div>
+      <div class="container mx-auto px-4 sm:px-6 lg:px-20 my-20 text-center relative overflow-hidden">
+
+        <div class="circle-animate"></div>
+        <div class="left-shape"></div>
+        <div class="right-shape"></div>
+
+        <div class="bg-[#172b6c] rounded-lg p-10">
+          <h1 class="text-4xl md:text-5xl text-white font-extrabold mb-6" data-aos="fade-up" data-aos-delay="200">
+            New IT challenges for your business – Daily
+          </h1>
+          <div class="text-lg text-white" data-aos="fade-up" data-aos-delay="500">(last years problems almost seem easy
+            now)</div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto px-4">
+            <div class="bg-white text-black p-6 rounded-2xl shadow-lg border border-white/10"
+              v-for="(data, index) in content.challengeCard" data-aos="zoom-in" :data-aos-delay="index * 300">
+              <img :src="data.image" alt="icon" class="mx-auto mb-4 w-20 h-20 object-contain" />
+              <h3 class="text-xl font-bold mb-3">{{ data.title }}</h3>
+              <span class="">
+                {{ data.desc }}
+              </span>
+            </div>
+          </div>
 
 
-    <section class="min-h-screen">
-      <!-- Text Content -->
-      <div class="container mx-auto px-4 sm:px-6 lg:px-20 my-8 text-center">
-        <h1 class="text-4xl md:text-5xl font-extrabold mb-6" data-aos="fade-up" data-aos-delay="0">
-          New Approach to Consulting
-        </h1>
+        </div>
+      </div>
+    </div>
 
-        <span class="text-gray-400 mb-6 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quas ad facilis laborum minima,
-          nisi quod ea earum, mollitia, error tempora ratione. Cum consectetur odit sint aut in minima sequi.
-        </span>
-        <span class="text-gray-400 mb-6 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quas ad facilis laborum minima,
-          nisi quod ea earum, mollitia, error tempora ratione. Cum consectetur odit sint aut in minima sequi.
-        </span>
-        <span class="text-gray-400 mb-6 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quas ad facilis laborum minima,
-          nisi quod ea earum, mollitia, error tempora ratione. Cum consectetur odit sint aut in minima sequi.
-        </span>
-        <span class="text-gray-400 mb-6 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quas ad facilis laborum minima,
-          nisi quod ea earum, mollitia, error tempora ratione. Cum consectetur odit sint aut in minima sequi.
-        </span>
-        <span class="text-gray-400 mb-6 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quas ad facilis laborum minima,
-          nisi quod ea earum, mollitia, error tempora ratione. Cum consectetur odit sint aut in minima sequi.
-        </span>
-        <span class="text-gray-400 mb-6 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quas ad facilis laborum minima,
-          nisi quod ea earum, mollitia, error tempora ratione. Cum consectetur odit sint aut in minima sequi.
-        </span>
-        <span class="text-gray-400 mb-6 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quas ad facilis laborum minima,
-          nisi quod ea earum, mollitia, error tempora ratione. Cum consectetur odit sint aut in minima sequi.
-        </span>
+
+    <section class="min-h-screen p-6">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto px-4">
+        <div class="bg-white text-black p-6 rounded-2xl shadow-lg border border-white/10 text-center"
+          v-for="(item, index) in items" data-aos="zoom-in" :data-aos-delay="index * 300">
+          <img :src="item.image" alt="icon" class="mx-auto mb-4 w-20 h-20 object-contain" />
+          <h2 class="text-3xl font-semibold mb-2">{{ item.title }}</h2>
+          <p class="text-lg">{{ item.description }}</p>
+        </div>
       </div>
 
-    </section>
-
-    <section class="min-h-screen flex flex-wrap gap-5 justify-center p-6" :style="{
-      background:
-        'linear-gradient(to top, #86c9fd, #75bcf1, #64afe5, #52a2d9, #3e96cd)',
-    }">
-      <div v-for="(item, index) in items" :key="index" data-aos="fade-up" :data-aos-delay="index * 200"
-        data-aos-duration="1000"
-        class="bg-white/20 backdrop-blur-lg border border-white/20 rounded-xl shadow-lg max-w-xl w-full p-8 text-center text-white">
-        <img :src="item.image" alt="icon" class="mx-auto mb-4 w-20 h-20 object-contain" />
-        <h2 class="text-3xl font-semibold mb-2">{{ item.title }}</h2>
-        <p class="text-lg">{{ item.description }}</p>
-      </div>
     </section>
   </div>
 </template>
