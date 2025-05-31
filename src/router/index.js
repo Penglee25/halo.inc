@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.vue'
 
 import Home from '../views/Home.vue'
 import Contact from '../views/Contact.vue';
-import Careers from '../views/Careers.vue';
+import BuySpot from '../views/BuySpot.vue';
 
 const routes = [
   {
@@ -12,7 +12,7 @@ const routes = [
     children: [
       { path: 'home', name: 'Home', component: Home },
       { path: 'contact', name: 'Contact', component: Contact },
-      { path: 'careers', name: 'Careers', component: Careers }
+      { path: 'buyspot', name: 'Buy a spot', component: BuySpot }
     ]
   }
 ]

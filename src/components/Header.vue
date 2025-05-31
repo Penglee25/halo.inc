@@ -1,11 +1,19 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import { RouterLink, useRoute } from 'vue-router'
+import halo from '../assets/images/halo.png'
+import halowhite from '../assets/images/halowhite.png'
 
 const isScrolled = ref(false)
 const isMenuOpen = ref(false)
+const route = useRoute()
+
+const image = ref(halo)
 
 const handleScroll = () => {
-  isScrolled.value = window.scrollY > 10
+  isScrolled.value = window.scrollY > 10;
+  image.value = isScrolled.value ? halo : halowhite
+
 }
 
 const toggleMenu = () => {
@@ -14,6 +22,7 @@ const toggleMenu = () => {
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
+  image.value = halo;
 })
 
 onUnmounted(() => {
@@ -24,13 +33,14 @@ onUnmounted(() => {
 <template>
 
   <header :class="[
-    'fixed w-full top-0 z-50 transition-all duration-300 ease-in-out',
+    'fixed w-full top-0 left-0 z-50 transition-all duration-300 ease-in-out ',
     isScrolled
-      ? 'bg-white/80 shadow-md backdrop-blur-sm py-2'
-      : 'bg-transparent py-4'
-  ]">
-    <nav class="container mx-auto flex items-center justify-between px-4">
-      <h1 class="text-xl font-bold">MySite</h1>
+      ? 'bg-white shadow-md backdrop-blur-sm'
+      : 'bg-transparent']">
+    <nav class="container mx-auto px-4 sm:px-6 lg:px-20 flex items-center justify-between">
+      <a href="">
+        <img :src="image" alt="halo" style="width: 110px;">
+      </a>
 
       <!-- Burger Button (Mobile) -->
       <button class="lg:hidden text-gray-800 focus:outline-none" @click="toggleMenu">
@@ -46,9 +56,15 @@ onUnmounted(() => {
 
       <!-- Desktop Menu -->
       <ul class="hidden lg:flex space-x-6 text-sm font-medium">
-        <li><a href="#" class="hover:text-blue-600">Home</a></li>
-        <li><a href="#" class="hover:text-blue-600">About</a></li>
-        <li><a href="#" class="hover:text-blue-600">Contact</a></li>
+        <li>
+          <RouterLink to="/home" class="hover:text-blue-600" :active-class="`${isScrolled ? 'text-blue-600' : 'text-white'} font-bold`">Home</RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/contact" class="hover:text-blue-600" :active-class="`${isScrolled ? 'text-blue-600' : 'text-white'} font-bold`">Contact
+          </RouterLink>
+        </li>
+        <RouterLink to="/buyspot" class="hover:text-blue-600" :active-class="`${isScrolled ? 'text-blue-600' : 'text-white'} font-bold`">Buy a Spot
+        </RouterLink>
       </ul>
     </nav>
 
