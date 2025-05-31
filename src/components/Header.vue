@@ -33,13 +33,13 @@ onUnmounted(() => {
 <template>
 
   <header :class="[
-    'fixed w-full top-0 left-0 z-50 transition-all duration-300 ease-in-out ',
+    'fixed w-full top-0 left-0 z-50 h-20 transition-all duration-300 ease-in-out',
     isScrolled
-      ? 'bg-white shadow-md backdrop-blur-sm'
+      ? 'bg-[#275fe2a9] shadow-md backdrop-blur-sm'
       : 'bg-transparent']">
-    <nav class="container mx-auto px-4 sm:px-6 lg:px-20 flex items-center justify-between">
+    <nav class="container mx-auto px-4 sm:px-6 lg:px-20 mt-3 flex items-center justify-between">
       <a href="">
-        <img :src="image" alt="halo" style="width: 110px;">
+        <img src="../assets/images/halowhite.png" alt="halo" style="width: 120px;">
       </a>
 
       <!-- Burger Button (Mobile) -->
@@ -55,15 +55,15 @@ onUnmounted(() => {
       </button>
 
       <!-- Desktop Menu -->
-      <ul class="hidden lg:flex space-x-6 text-sm font-medium">
+      <ul class="hidden lg:flex space-x-6 font-medium text-xl">
         <li>
-          <RouterLink to="/home" class="hover:text-blue-600" :active-class="`${isScrolled ? 'text-blue-600' : 'text-white'} font-bold`">Home</RouterLink>
+          <RouterLink to="/home" class="hover:text-white text-[#fff]" active-class="active-text-navs">Home</RouterLink>
         </li>
         <li>
-          <RouterLink to="/contact" class="hover:text-blue-600" :active-class="`${isScrolled ? 'text-blue-600' : 'text-white'} font-bold`">Contact
-          </RouterLink>
+          <RouterLink to="/contact" class="hover:text-white text-[#fff]" active-class="active-text-navs">Contact
+          </RouterLink> 
         </li>
-        <RouterLink to="/buyspot" class="hover:text-blue-600" :active-class="`${isScrolled ? 'text-blue-600' : 'text-white'} font-bold`">Buy a Spot
+        <RouterLink to="/buyspot" class="hover:text-white text-[#fff]" active-class="active-text-navs">Buy a Spot
         </RouterLink>
       </ul>
     </nav>
