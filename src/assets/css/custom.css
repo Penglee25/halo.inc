@@ -39,12 +39,12 @@ body.offcanvas-menu:before {
 }
 
 .bg-blue-shape {
-  width: 120vw;
+   width: 150vw; /* wider than screen */
   height: 250px;
   top: 25%;
-  z-index: -1;
-  left: -10vw;
+  left: -25vw; /* center the wide shape */
   position: absolute;
+  z-index: -1;
   transform: rotate(5deg);
   background: #4d1cff;
   pointer-events: none;
@@ -85,20 +85,16 @@ body.offcanvas-menu:before {
 }
 
 .animated-object {
-  width: 100px;
-  height: 100px;
-  background: #dfdfdfb4;
-  /* Tailwind's sky-500 */
-  border-radius: 50%;
+  width: 80px;
+  height: 80px;
   position: absolute;
   top: 20%;
-  left: 30%;
-  transform: translate(-50%, -50%);
+  left: 30%; 
   animation: float 6s ease-in-out infinite;
 }
 
 .tringle-shape {
-  width: 40px;
+  width: 30px;
   aspect-ratio: 1 / cos(30deg);
   clip-path: polygon(50% 100%, 100% 0, 0 0);
   background: #fff;
@@ -109,8 +105,8 @@ body.offcanvas-menu:before {
 }
 
 .circle-animate {
-  width: 70px;
-  height: 70px;
+  width: 30px;
+  height: 30px;
   background: #dfdfdfb4;
   /* Tailwind's sky-500 */
   border-radius: 50%;
@@ -118,7 +114,7 @@ body.offcanvas-menu:before {
   top: 20%;
   left: 10%;
   transform: translate(-50%, -50%);
-  animation: float 2s ease-in-out infinite;
+  animation: shapeAnimationTwo 22s ease-in-out infinite;
 }
 
 .right-shape {

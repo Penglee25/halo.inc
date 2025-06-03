@@ -45,7 +45,7 @@ const items = ref([
 
         </div>
 
-        <div class="animated-object"></div>
+      <img src="../../public/images/icons/dotshape.png" alt="shape" class="animated-object">
         <div class="tringle-shape"></div>
         <div class="left-circles"></div>
         <div class="right-circles"></div>
@@ -71,6 +71,7 @@ const items = ref([
       </path>
     </svg>
 
+
     <!-- Overlay -->
 
     <!-- Animated Content -->
@@ -92,22 +93,99 @@ const items = ref([
     </div>
 
 
-    <div class="relative">
+    <section class="py-16">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-20">
+        <div class=" bg-[#275fe2b9] p-8 rounded-2xl shadow-md">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center bg-white rounded-lg p-5">
+
+            <div>
+              <p class="text-4xl font-bold text-blue-600">125+</p>
+              <p class="text-gray-700 mt-2">Happy Clients</p>
+            </div>
+
+            <div>
+              <p class="text-4xl font-bold text-blue-600">250+</p>
+              <p class="text-gray-700 mt-2">Successful Projects</p>
+            </div>
+
+            <div>
+              <p class="text-4xl font-bold text-blue-600">40+</p>
+              <p class="text-gray-700 mt-2">Team Members</p>
+            </div>
+
+            <div>
+              <p class="text-4xl font-bold text-blue-600">20+</p>
+              <p class="text-gray-700 mt-2">Awards Winning</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <div class="relative overflow-hidden">
       <div class="bg-blue-shape"></div>
       <div class="container mx-auto px-4 sm:px-6 lg:px-20 my-20 text-center relative overflow-hidden">
 
-        <div class="circle-animate"></div>
-        <div class="left-shape"></div>
-        <div class="right-shape"></div>
+        <div class="bg-[#172b6c] rounded-lg p-10 relative overflow-hidden">
 
-        <div class="bg-[#172b6c] rounded-lg p-10">
+          <div class="circle-animate"></div>
+          <div class="right-shape"></div>
+
           <h1 class="text-4xl md:text-5xl text-white font-extrabold mb-6" data-aos="fade-up" data-aos-delay="200">
             New IT challenges for your business – Daily
           </h1>
-          <div class="text-lg text-white" data-aos="fade-up" data-aos-delay="500">(last years problems almost seem easy
+          <div class="text-lg text-white mb-20" data-aos="fade-up" data-aos-delay="500">(last years problems almost seem
+            easy
             now)</div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto px-4">
+          <div class="grid grid-flow-col grid-rows-2 md:grid-rows-1 gap-6 max-w-6xl mx-auto px-4">
+            <div class="flex gap-4 text-gray-200 text-left" data-aos="fade-right" data-aos-delay="200">
+              <div>
+                <img src="../../public/images/icons/speed.png" alt="icon" class="mb-4 w-20 h-20 object-contain" />
+                <h3 class="text-xl font-bold">Hyperspeed IT</h3>
+                <span>IT was fast before – NOW it is Hyperspeed, requiring constant attention and a shifting balance
+                  between multi-cloud, on-premise, hardware, and software solutions.</span>
+              </div>
+              <div class="hidden lg:block w-px min-h-[150px] bg-gray-400 opacity-40 mr-3"></div>
+            </div>
+
+
+            <div class="flex gap-4 text-gray-200 text-left" data-aos="fade-right" data-aos-delay="300">
+              <div>
+                <img src="../../public/images/icons/efficient.png" alt="icon" class="mb-4 w-20 h-20 object-contain" />
+                <h3 class="text-xl font-bold">Efficiency & Scalability</h3>
+                <span>Ensuring security, efficiency, and scalability is critical to staying competitive and supporting
+                  growth.</span>
+              </div>
+              <div class="hidden lg:block w-px min-h-[150px] bg-gray-400 opacity-40 mr-3"></div>
+            </div>
+
+            <div class="flex gap-4 text-gray-200 text-left" data-aos="fade-right" data-aos-delay="500">
+              <div>
+                <img src="../../public/images/icons/guide.png" alt="icon" class="mb-4 w-20 h-20 object-contain" />
+                <h3 class="text-xl font-bold">Expert Guidance</h3>
+                <span>Organizations need expert support to tackle complex challenges like cloud migration, DevOps, data
+                  analytics, and compliance.</span>
+              </div>
+              <div class="hidden lg:block w-px min-h-[150px] bg-gray-400 opacity-40 mr-3"></div>
+            </div>
+
+            <div class="flex gap-4 text-gray-200 text-left" data-aos="fade-right" data-aos-delay="800">
+              <div>
+                <img src="../../public/images/icons/automate.png" alt="icon" class="mb-4 w-20 h-20 object-contain" />
+                <h3 class="text-xl font-bold">Automation is Non-Negotiable</h3>
+                <span>If it isn’t automated – it needs to be. Or you are falling further behind.</span>
+              </div>
+            </div>
+
+
+          </div>
+
+          <!-- <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto px-4">
             <div class="bg-white text-black p-6 rounded-2xl shadow-lg border border-white/10"
               v-for="(data, index) in content.challengeCard" data-aos="zoom-in" :data-aos-delay="index * 300">
               <img :src="data.image" alt="icon" class="mx-auto mb-4 w-20 h-20 object-contain" />
@@ -115,8 +193,10 @@ const items = ref([
               <span class="">
                 {{ data.desc }}
               </span>
+
             </div>
-          </div>
+              <div class="w-px h-12 bg-gray-300"></div>
+          </div> -->
 
 
         </div>
