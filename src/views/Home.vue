@@ -40,12 +40,12 @@ const items = ref([
             <img src="../assets/images/halo.png" alt="Halo Logo" class="w-full h-full object-contain">
           </div>
 
-          <h2 class="text-4xl font-bold mb-4" data-aos="fade-up" data-aos-duration="3000">Your out-of-the-box IT
+          <h2 class="text-2xl md:text-4xl font-bold mb-4" data-aos="fade-up" data-aos-duration="3000">Your out-of-the-box IT
             solutions company. (mostly!)</h2>
 
         </div>
 
-      <img src="../../public/images/icons/dotshape.png" alt="shape" class="animated-object">
+      <img src="/images/icons/dotshape.png" alt="shape" class="animated-object">
         <div class="tringle-shape"></div>
         <div class="left-circles"></div>
         <div class="right-circles"></div>
@@ -142,10 +142,10 @@ const items = ref([
             easy
             now)</div>
 
-          <div class="grid grid-flow-col grid-rows-2 md:grid-rows-1 gap-6 max-w-6xl mx-auto px-4">
+          <div class="grid grid-flow-col grid-rows-5 gap-8 md:grid-rows-1 lg:gap-6 max-w-6xl mx-auto px-4">
             <div class="flex gap-4 text-gray-200 text-left" data-aos="fade-right" data-aos-delay="200">
               <div>
-                <img src="../../public/images/icons/speed.png" alt="icon" class="mb-4 w-20 h-20 object-contain" />
+                <img src="/images/icons/speed.png" alt="icon" class="mb-4 w-20 h-20 object-contain" />
                 <h3 class="text-xl font-bold">Hyperspeed IT</h3>
                 <span>IT was fast before – NOW it is Hyperspeed, requiring constant attention and a shifting balance
                   between multi-cloud, on-premise, hardware, and software solutions.</span>
@@ -156,7 +156,7 @@ const items = ref([
 
             <div class="flex gap-4 text-gray-200 text-left" data-aos="fade-right" data-aos-delay="300">
               <div>
-                <img src="../../public/images/icons/efficient.png" alt="icon" class="mb-4 w-20 h-20 object-contain" />
+                <img src="/images/icons/efficient.png" alt="icon" class="mb-4 w-20 h-20 object-contain" />
                 <h3 class="text-xl font-bold">Efficiency & Scalability</h3>
                 <span>Ensuring security, efficiency, and scalability is critical to staying competitive and supporting
                   growth.</span>
@@ -166,7 +166,7 @@ const items = ref([
 
             <div class="flex gap-4 text-gray-200 text-left" data-aos="fade-right" data-aos-delay="500">
               <div>
-                <img src="../../public/images/icons/guide.png" alt="icon" class="mb-4 w-20 h-20 object-contain" />
+                <img src="/images/icons/guide.png" alt="icon" class="mb-4 w-20 h-20 object-contain" />
                 <h3 class="text-xl font-bold">Expert Guidance</h3>
                 <span>Organizations need expert support to tackle complex challenges like cloud migration, DevOps, data
                   analytics, and compliance.</span>
@@ -176,7 +176,7 @@ const items = ref([
 
             <div class="flex gap-4 text-gray-200 text-left" data-aos="fade-right" data-aos-delay="800">
               <div>
-                <img src="../../public/images/icons/automate.png" alt="icon" class="mb-4 w-20 h-20 object-contain" />
+                <img src="/images/icons/automate.png" alt="icon" class="mb-4 w-20 h-20 object-contain" />
                 <h3 class="text-xl font-bold">Automation is Non-Negotiable</h3>
                 <span>If it isn’t automated – it needs to be. Or you are falling further behind.</span>
               </div>

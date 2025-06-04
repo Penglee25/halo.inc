@@ -39,7 +39,7 @@ body.offcanvas-menu:before {
 }
 
 .bg-blue-shape {
-   width: 150vw; /* wider than screen */
+  width: 150vw; /* wider than screen */
   height: 250px;
   top: 25%;
   left: -25vw; /* center the wide shape */
@@ -89,7 +89,7 @@ body.offcanvas-menu:before {
   height: 80px;
   position: absolute;
   top: 20%;
-  left: 30%; 
+  left: 30%;
   animation: float 6s ease-in-out infinite;
 }
 
@@ -529,4 +529,28 @@ body.offcanvas-menu:before {
   -webkit-animation-delay: 2s;
   -o-animation-delay: 2s;
   animation-delay: 2s;
+}
+
+/* 🌐 Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .left-circles,
+  .right-circles,
+  .left-circles:after,
+  .right-circles:after {
+    width: 200px;
+    height: 200px;
+  }
+
+  .left-circles {
+    left: -140px;
+  }
+
+  .right-circles {
+    top: 80px;
+    right: -130px;
+  }
+
+  .right-circles:after {
+    right: -40px;
+  }
 }

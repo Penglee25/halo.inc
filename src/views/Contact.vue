@@ -2,8 +2,7 @@
 
   <section class="relative max-h-72 text-white overflow-hidden bg-[#f8f7fc]">
     <!-- Top Clip -->
-    <div class="relative box h-screen w-full bg-[#2760e2]"
-      style="background-image: url('/images/cta-bg-dots.png');">
+    <div class="relative box h-screen w-full bg-[#2760e2]" style="background-image: url('/images/cta-bg-dots.png');">
 
 
       <img src="/images/icons/dotshape.png" alt="shape" class="animated-object">
@@ -35,34 +34,31 @@
     </div>
   </section>
 
-  <section class=" h-screen">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-20 my-60 text-center">
-      <div class="text-center w-full flex justify-center">
-        <div class="relative">
-          <img src="../assets/images/h.png" alt="logo" class="absolute w-32 opacity-[0.12] -top-24">
-          <span class="text-3xl md:text-2xl font-extrabold mb-6 text-blue-500 uppercase">Be In touch</span>
-        </div>
+  <div class="container mx-auto px-4 sm:px-6 lg:px-20 mt-60 text-center">
+    <div class="text-center w-full flex justify-center">
+      <div class="relative">
+        <img src="../assets/images/h.png" alt="logo" class="absolute w-32 opacity-[0.12] -top-24">
+        <span class="text-3xl md:text-2xl font-extrabold mb-6 text-blue-500 uppercase">Be In touch</span>
       </div>
-
-      <h1 class="text-4xl mt-20">Contact Info</h1>
-
-      <p class="text-gray-500 my-5">We tried to provide you with the most necessary information, so that it would be
-        easier for you to contact us in any way convenient for you.</p>
-
-      <div class="container mx-auto px-4 sm:px-6 lg:px-20 text-center pt-10 ">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.041067887734!2d121.02365997507589!3d14.710269674382268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b1191f971c59%3A0x9136f8c86c0ca9fd!2sCalifornia%20Village!5e0!3m2!1sen!2sph!4v1748924310645!5m2!1sen!2sph"
-          class="w-full h-96 border-0" allowfullscreen="true" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-
     </div>
 
-  </section>
+    <h1 class="text-4xl mt-20">Contact Info</h1>
+
+    <p class="text-gray-500 my-5">We tried to provide you with the most necessary information, so that it would be
+      easier for you to contact us in any way convenient for you.</p>
+  </div>
 
 
-  <section class="h-screen">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-20 text-center pt-10 relative overflow-hidden border h-[80vh]">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.041067887734!2d121.02365997507589!3d14.710269674382268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b1191f971c59%3A0x9136f8c86c0ca9fd!2sCalifornia%20Village!5e0!3m2!1sen!2sph!4v1748924310645!5m2!1sen!2sph"
+      class=" border-0 absolute top-0 bottom-0 left-0 right-0" allowfullscreen="true" loading="lazy" style="width: 100%; height: 100%;"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+
+  <section class="h-screen flex items-center">
     <div class="max-w-4xl mx-auto px-4 py-10">
       <p class="text-blue-600 uppercase tracking-wide text-sm text-center mb-2">Let’s talk</p>
       <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Send Us a Message</h2>

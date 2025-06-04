@@ -43,7 +43,7 @@ onUnmounted(() => {
       </a>
 
       <!-- Burger Button (Mobile) -->
-      <button class="lg:hidden text-gray-800 focus:outline-none" @click="toggleMenu">
+      <button class="lg:hidden text-white focus:outline-none" @click="toggleMenu">
         <svg v-if="!isMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
@@ -61,7 +61,7 @@ onUnmounted(() => {
         </li>
         <li>
           <RouterLink to="/contact" class="hover:text-white text-[#fff]" active-class="active-text-navs">Contact
-          </RouterLink> 
+          </RouterLink>
         </li>
         <RouterLink to="/buyspot" class="hover:text-white text-[#fff]" active-class="active-text-navs">Buy a Spot
         </RouterLink>
@@ -71,10 +71,18 @@ onUnmounted(() => {
     <!-- Mobile Menu -->
     <transition name="slide-fade">
       <ul v-if="isMenuOpen"
-        class="lg:hidden flex flex-col space-y-4 bg-white/90 backdrop-blur px-4 py-6 shadow-md text-sm font-medium">
-        <li><a href="#" class="hover:text-blue-600">Home</a></li>
-        <li><a href="#" class="hover:text-blue-600">About</a></li>
-        <li><a href="#" class="hover:text-blue-600">Contact</a></li>
+        class="lg:hidden flex flex-col space-y-4 bg-[#275fe2] shadow-md backdrop-blur-sm px-4 py-6 text-sm font-medium">
+        <li>
+          <RouterLink to="/home" class="hover:text-white text-[#fff]" active-class="active-text-navs">Home</RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/contact" class="hover:text-white text-[#fff]" active-class="active-text-navs">Contact
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/buyspot" class="hover:text-white text-[#fff]" active-class="active-text-navs">Buy a Spot
+          </RouterLink>
+        </li>
       </ul>
     </transition>
   </header>
