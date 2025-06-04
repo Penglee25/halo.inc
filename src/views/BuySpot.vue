@@ -3,25 +3,25 @@
     <!-- Top Clip -->
     <div class="relative box h-screen w-full bg-[#2760e2]" style="background-image: url('/images/cta-bg-dots.png');">
 
-
-      <img src="/images/icons/dotshape.png" alt="shape" class="animated-object">
+      <img src="/images/icons/dotshape.png" alt="shape" class="animated-object hidden lg:block"
+        style="left: 30%; top: 20%; width: 80px;">
       <div class="tringle-shape"></div>
       <div class="circle-animate" style="left: 15%; top: 25%"></div>
 
       <div class="container flex flex-col justify-start text-center pt-32 px-36">
-        <div class="xl:w-1/2 w-full text-left">
+        <div class="w-full text-left">
 
           <div class="flex relative">
             <img src="../assets/images/hwhite.png" alt="logo" class="absolute w-9 opacity-[0.12] -top-3 -left-8">
 
             <div class="ml-3">
-              <h2 class="text-3xl font-semibold mb-1">Buy a Spot</h2>
+              <h2 class="text-lg lg:text-3xl font-semibold mb-1">Buy a spot</h2>
               <nav aria-label="breadcrumb">
-                <ol class="flex flex-wrap text-sm text-gray-600 space-x-2">
+                <ol class="flex flex-row lg:flex-wrap text-sm text-gray-600 space-x-2">
                   <li class="after:content-['/'] after:mx-2 last:after:content-none">
                     <a href="/home" class="text-white hover:underline">Home</a>
                   </li>
-                  <li class="text-gray-200" aria-current="page">Buy a Spot</li>
+                  <li class="text-gray-200" aria-current="page">Buy a spot</li>
                 </ol>
               </nav>
             </div>
@@ -34,7 +34,7 @@
   </section>
 
 
-  <section class="h-screen flex items-center">
+  <section class="h-screen flex items-center mt-40">
     <div class="container mx-auto px-4 sm:px-6 lg:px-20 my-20 text-center">
 
       <h1 class="text-4xl md:text-5xl text-gray-900 font-extrabold mb-6" data-aos="fade-up" data-aos-delay="200">

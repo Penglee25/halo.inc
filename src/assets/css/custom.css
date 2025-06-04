@@ -54,8 +54,8 @@ body.offcanvas-menu:before {
 .right-circles,
 .left-circles:after,
 .right-circles:after {
-  height: 450px;
-  width: 450px;
+  height: 420px;
+  width: 420px;
   position: absolute;
   border-radius: 50%;
   border: 1px solid #ececec62;
@@ -80,16 +80,12 @@ body.offcanvas-menu:before {
 }
 
 .right-circles:after {
-  right: -150px;
+  right: -80px;
   top: 0;
 }
 
 .animated-object {
-  width: 80px;
-  height: 80px;
   position: absolute;
-  top: 20%;
-  left: 30%;
   animation: float 6s ease-in-out infinite;
 }
 
@@ -137,7 +133,7 @@ body.offcanvas-menu:before {
       #0000 71%
     ) no-repeat;
   mask: radial-gradient(
-        100% 100%,
+        closest-side at 50% 50%,
         #0000 calc((14.133% + 0.847px) / 0.334 - 2.996px),
         #000 calc((14.133% + 0.847px) / 0.334 - 2.996px + 1px)
       )
@@ -552,5 +548,9 @@ body.offcanvas-menu:before {
 
   .right-circles:after {
     right: -40px;
+  }
+
+  .halo-logo{
+    width: 270px !important;
   }
 }

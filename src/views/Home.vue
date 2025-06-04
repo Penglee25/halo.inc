@@ -31,21 +31,25 @@ const items = ref([
 <template>
   <div>
 
-    <section class="relative h-screen text-white overflow-hidden bg-[#f8f7fc]">
+    <section class="relative text-white overflow-hidden bg-[#f8f7fc]">
       <!-- Top Clip -->
-      <div class="relative box h-screen w-full bg-[#2760e2]">
+      <div class="relative box w-full h-[80vh] bg-[#2760e2]">
         <div class="flex flex-col items-center justify-center px-6 text-center pt-20">
 
-          <div class="blob bg-[#f8f7fc] overflow-hidden mb-10" data-aos="zoom-in-up" data-aos-duration="2000">
-            <img src="../assets/images/halo.png" alt="Halo Logo" class="w-full h-full object-contain">
+          <div class="relative border my-40">
+            <div class="animated-object halo-logo" style="left: 20%; top: 50%; width: 550px; animation: float 8s ease-in-out infinite">
+              <img src="/images/haloshape.png" alt="Halo Logo" class="w-full h-full object-contain">
+            </div>
           </div>
 
-          <h2 class="text-2xl md:text-4xl font-bold mb-4" data-aos="fade-up" data-aos-duration="3000">Your out-of-the-box IT
+          <h2 class="text-2xl md:text-4xl font-bold mb-4" data-aos="fade-up" data-aos-duration="3000">Your
+            out-of-the-box IT
             solutions company. (mostly!)</h2>
 
         </div>
 
-      <img src="/images/icons/dotshape.png" alt="shape" class="animated-object">
+        <img src="/images/icons/dotshape.png" alt="shape" class="animated-object"
+          style="left: 20%; top: 20%; width: 80px;">
         <div class="tringle-shape"></div>
         <div class="left-circles"></div>
         <div class="right-circles"></div>
@@ -135,14 +139,14 @@ const items = ref([
           <div class="circle-animate"></div>
           <div class="right-shape"></div>
 
-          <h1 class="text-4xl md:text-5xl text-white font-extrabold mb-6" data-aos="fade-up" data-aos-delay="200">
+          <h1 class="text-2xl md:text-5xl text-white font-extrabold mb-6" data-aos="fade-up" data-aos-delay="200">
             New IT challenges for your business – Daily
           </h1>
-          <div class="text-lg text-white mb-20" data-aos="fade-up" data-aos-delay="500">(last years problems almost seem
+          <div class="text-md lg:text-lg text-white mb-20" data-aos="fade-up" data-aos-delay="500">(last years problems almost seem
             easy
             now)</div>
 
-          <div class="grid grid-flow-col grid-rows-5 gap-8 md:grid-rows-1 lg:gap-6 max-w-6xl mx-auto px-4">
+          <div class="grid grid-flow-col grid-rows-4 gap-8 md:grid-rows-1 lg:gap-6 max-w-6xl mx-auto px-4">
             <div class="flex gap-4 text-gray-200 text-left" data-aos="fade-right" data-aos-delay="200">
               <div>
                 <img src="/images/icons/speed.png" alt="icon" class="mb-4 w-20 h-20 object-contain" />
