@@ -49,6 +49,53 @@ const content = {
       desc: "If it isn’t automated – it needs to be. Or you are falling further behind.",
     },
   ],
+
+  whatWeDo: [
+    {
+      title: "Cybersecurity",
+      description:
+        "Keep your business protected with proactive security strategies.",
+      image: "/images/icons/cybersecurity.gif", // cloud upload icon
+    },
+    {
+      title: "AI Applications",
+      description:
+        "Turn data into decisions with custom AI and automation solutions.",
+      image: "/images/icons/ai.gif",
+    },
+    {
+      title: "Test & Deployment Automation",
+      description:
+        "Streamline your development pipeline for faster, safer releases.",
+      image: "/images/icons/deploy.gif", // network/cloud icon
+    },
+    {
+      title: "Technical Team Building",
+      description:
+        "Find and grow the right talent to power your long-term success.",
+      image: "/images/icons/teamwork.gif",
+    },
+  ],
+
+   whyChooseUs: [
+    {
+      title: "Fast, friendly support with real people",
+      image: "/images/icons/helpdesk.gif", // cloud upload icon
+    },
+    {
+      title: "Scalable solutions tailored to your business",
+      image: "/images/icons/scale.gif",
+    },
+    {
+      title: "Certified experts with years of experience",
+      image: "/images/icons/certificate.gif", // network/cloud icon
+    },
+    {
+      title: "Proven track record of reducing downtime and costs",
+      image: "/images/icons/cost-effectiveness.gif",
+    },
+  ],
+
 };
 
 export default content;

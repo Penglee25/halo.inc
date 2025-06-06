@@ -38,6 +38,19 @@ body.offcanvas-menu:before {
   transition: width 0.3s ease;
 }
 
+.testimonials.style-v2:before {
+    content: "\201C";
+    display: block;
+    position: absolute;
+    top: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "serif";
+    font-size: 220px;
+    line-height: 100px;
+    color: rgba(37,128,254,0.2)
+}
+
 .bg-blue-shape {
   width: 150vw; /* wider than screen */
   height: 250px;
@@ -46,7 +59,7 @@ body.offcanvas-menu:before {
   position: absolute;
   z-index: -1;
   transform: rotate(5deg);
-  background: #4d1cff;
+  background: #0c1d68;
   pointer-events: none;
 }
 

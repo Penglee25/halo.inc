@@ -1,30 +1,35 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import mainPhoto from "../assets/images/hero.svg";
 import content from '../data/content';
 
-const items = ref([
-  {
-    title: 'Cloud Migration',
-    description: 'Seamlessly move your workloads to the cloud with minimal disruption.',
-    image: 'https://cdn-icons-png.flaticon.com/512/414/414927.png', // cloud upload icon
-  },
-  {
-    title: 'Accelerate Innovation in Cloud',
-    description: 'Leverage cloud technologies to speed up your business innovation cycles.',
-    image: 'https://img.icons8.com/fluency/96/rocket.png',
-  },
-  {
-    title: 'Cloud Adoption Program',
-    description: 'Tailored programs to help your team embrace cloud technologies effectively.',
-    image: 'https://cdn-icons-png.flaticon.com/512/2920/2920340.png', // network/cloud icon
-  },
-  {
-    title: 'Cloud Compliance and Management',
-    description: 'Ensure your cloud infrastructure meets security and compliance standards.',
-    image: 'https://img.icons8.com/fluency/96/security-checked.png',
-  },
-]);
+const testimonials = [
+  { name: 'Alice', message: 'This is the best service ever!' },
+  { name: 'Bob', message: 'Amazing experience and support.' },
+  { name: 'Charlie', message: 'I would highly recommend it.' },
+  { name: 'Jessie', message: 'I would highly recommend it.' },
+  { name: 'James', message: 'I would highly recommend it.' },
+]
+
+
+const currentIndex = ref(0)
+let interval
+
+const nextSlide = () => {
+  currentIndex.value = (currentIndex.value + 1) % testimonials.length
+}
+
+const prevSlide = () => {
+  currentIndex.value = (currentIndex.value - 1 + testimonials.length) % testimonials.length
+}
+
+onMounted(() => {
+  interval = setInterval(nextSlide, 5000) // Auto slide every 5s
+})
+
+onBeforeUnmount(() => {
+  clearInterval(interval)
+})
 
 </script>
 
@@ -37,14 +42,16 @@ const items = ref([
         <div class="flex flex-col items-center justify-center px-6 text-center pt-20">
 
           <div class="relative border my-40">
-            <div class="animated-object halo-logo" style="left: 20%; top: 50%; width: 550px; animation: float 8s ease-in-out infinite">
+            <div class="animated-object halo-logo"
+              style="left: 20%; top: 50%; width: 550px; animation: float 8s ease-in-out infinite">
               <img src="/images/haloshape.png" alt="Halo Logo" class="w-full h-full object-contain">
             </div>
           </div>
 
-          <h2 class="text-2xl md:text-4xl font-bold mb-4" data-aos="fade-up" data-aos-duration="3000">Your
-            out-of-the-box IT
-            solutions company. (mostly!)</h2>
+          <h2 class="text-2xl md:text-4xl font-bold mb-4" data-aos="fade-up" data-aos-duration="2000">From Security to
+            Scale We Power Your Tech Future.</h2>
+          <p class="text-lg" data-aos="fade-up" data-aos-duration="2100">Helping you stay secure, work smarter, and grow
+            with confidence every step of the way</p>
 
         </div>
 
@@ -76,143 +83,16 @@ const items = ref([
     </svg>
 
 
-    <!-- Overlay -->
-
-    <!-- Animated Content -->
-
-    <div class="container relative mx-auto px-4 sm:px-6 lg:px-20 my-10 text-center py-20" data-aos="fade-up"
-      data-aos-duration="1000" id="business">
-
-      <h1 class="text-4xl md:text-5xl font-extrabold mb-6 text-gray-800" data-aos="fade-up" data-aos-delay="0">
-        Your Business needs End-to-End IT Solutions
-      </h1>
-      <span class="text-lg">Delivering Tailored, Comprehensive IT Solutions for Mid- to Large Enterprises</span>
-
-      <div class="flex justify-evenly gap-2 mt-10">
-        <div v-for="(data, index) in content.companylogo">
-          <img :src="data.image" :alt="data.text" data-aos="zoom-in" :data-aos-duration="data.animDuration">
-        </div>
-      </div>
-
-    </div>
-
-
-    <section class="py-16">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-20">
-        <div class=" bg-[#275fe2b9] p-8 rounded-2xl shadow-md">
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center bg-white rounded-lg p-5">
-
-            <div>
-              <p class="text-4xl font-bold text-blue-600">125+</p>
-              <p class="text-gray-700 mt-2">Happy Clients</p>
-            </div>
-
-            <div>
-              <p class="text-4xl font-bold text-blue-600">250+</p>
-              <p class="text-gray-700 mt-2">Successful Projects</p>
-            </div>
-
-            <div>
-              <p class="text-4xl font-bold text-blue-600">40+</p>
-              <p class="text-gray-700 mt-2">Team Members</p>
-            </div>
-
-            <div>
-              <p class="text-4xl font-bold text-blue-600">20+</p>
-              <p class="text-gray-700 mt-2">Awards Winning</p>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-
-
-    <div class="relative overflow-hidden">
-      <div class="bg-blue-shape"></div>
-      <div class="container mx-auto px-4 sm:px-6 lg:px-20 my-20 text-center relative overflow-hidden">
-
-        <div class="bg-[#172b6c] rounded-lg p-10 relative overflow-hidden">
-
-          <div class="circle-animate"></div>
-          <div class="right-shape"></div>
-
-          <h1 class="text-2xl md:text-5xl text-white font-extrabold mb-6" data-aos="fade-up" data-aos-delay="200">
-            New IT challenges for your business – Daily
-          </h1>
-          <div class="text-md lg:text-lg text-white mb-20" data-aos="fade-up" data-aos-delay="500">(last years problems almost seem
-            easy
-            now)</div>
-
-          <div class="grid grid-flow-col grid-rows-4 gap-8 md:grid-rows-1 lg:gap-6 max-w-6xl mx-auto px-4">
-            <div class="flex gap-4 text-gray-200 text-left" data-aos="fade-right" data-aos-delay="200">
-              <div>
-                <img src="/images/icons/speed.png" alt="icon" class="mb-4 w-20 h-20 object-contain" />
-                <h3 class="text-xl font-bold">Hyperspeed IT</h3>
-                <span>IT was fast before – NOW it is Hyperspeed, requiring constant attention and a shifting balance
-                  between multi-cloud, on-premise, hardware, and software solutions.</span>
-              </div>
-              <div class="hidden lg:block w-px min-h-[150px] bg-gray-400 opacity-40 mr-3"></div>
-            </div>
-
-
-            <div class="flex gap-4 text-gray-200 text-left" data-aos="fade-right" data-aos-delay="300">
-              <div>
-                <img src="/images/icons/efficient.png" alt="icon" class="mb-4 w-20 h-20 object-contain" />
-                <h3 class="text-xl font-bold">Efficiency & Scalability</h3>
-                <span>Ensuring security, efficiency, and scalability is critical to staying competitive and supporting
-                  growth.</span>
-              </div>
-              <div class="hidden lg:block w-px min-h-[150px] bg-gray-400 opacity-40 mr-3"></div>
-            </div>
-
-            <div class="flex gap-4 text-gray-200 text-left" data-aos="fade-right" data-aos-delay="500">
-              <div>
-                <img src="/images/icons/guide.png" alt="icon" class="mb-4 w-20 h-20 object-contain" />
-                <h3 class="text-xl font-bold">Expert Guidance</h3>
-                <span>Organizations need expert support to tackle complex challenges like cloud migration, DevOps, data
-                  analytics, and compliance.</span>
-              </div>
-              <div class="hidden lg:block w-px min-h-[150px] bg-gray-400 opacity-40 mr-3"></div>
-            </div>
-
-            <div class="flex gap-4 text-gray-200 text-left" data-aos="fade-right" data-aos-delay="800">
-              <div>
-                <img src="/images/icons/automate.png" alt="icon" class="mb-4 w-20 h-20 object-contain" />
-                <h3 class="text-xl font-bold">Automation is Non-Negotiable</h3>
-                <span>If it isn’t automated – it needs to be. Or you are falling further behind.</span>
-              </div>
-            </div>
-
-
-          </div>
-
-          <!-- <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto px-4">
-            <div class="bg-white text-black p-6 rounded-2xl shadow-lg border border-white/10"
-              v-for="(data, index) in content.challengeCard" data-aos="zoom-in" :data-aos-delay="index * 300">
-              <img :src="data.image" alt="icon" class="mx-auto mb-4 w-20 h-20 object-contain" />
-              <h3 class="text-xl font-bold mb-3">{{ data.title }}</h3>
-              <span class="">
-                {{ data.desc }}
-              </span>
-
-            </div>
-              <div class="w-px h-12 bg-gray-300"></div>
-          </div> -->
-
-
-        </div>
-      </div>
-    </div>
-
-
     <section class="min-h-screen p-6">
+
+      <h1 class="text-4xl text-center md:text-5xl font-extrabold text-gray-800 mb-20" data-aos="fade-up"
+        data-aos-delay="0">
+        What we do
+      </h1>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto px-4">
         <div class="bg-white text-black p-6 rounded-2xl shadow-lg border border-white/10 text-center"
-          v-for="(item, index) in items" data-aos="zoom-in" :data-aos-delay="index * 300">
+          v-for="(item, index) in content.whatWeDo" data-aos="zoom-in" :data-aos-delay="index * 300">
           <img :src="item.image" alt="icon" class="mx-auto mb-4 w-20 h-20 object-contain" />
           <h2 class="text-3xl font-semibold mb-2">{{ item.title }}</h2>
           <p class="text-lg">{{ item.description }}</p>
@@ -220,6 +100,82 @@ const items = ref([
       </div>
 
     </section>
+
+    <section class="h-screen bg-white flex items-center">
+      <div class="container relative mx-auto px-4 sm:px-6 lg:px-20 my-10 text-center py-20" data-aos="fade-up"
+        data-aos-duration="1000" id="business">
+
+        <div class="mb-20">
+          <h1 class="text-4xl md:text-5xl font-extrabold mb-6 text-gray-800" data-aos="fade-up" data-aos-delay="400">
+            Why Choose US
+          </h1>
+          <p class="text-lg" data-aos="fade-up" data-aos-delay="600">Your Success Is Our Business</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto px-4">
+
+          <div class="bg-white text-gray-700 p-2 rounded-2xl shadow-lg border border-white/5 text-center"
+            v-for="(item, index) in content.whyChooseUs" data-aos="fade-left" :data-aos-delay="index * 300">
+            <img :src="item.image" alt="icon" class="mx-auto mb-4 w-20 h-20 object-contain" />
+            <h2 class="text-xl font-semibold mb-2">{{ item.title }}</h2>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <div class="relative overflow-hidden">
+      <div class="bg-blue-shape"></div>
+      <div class="container mx-auto px-4 sm:px-6 lg:px-20 my-20 text-center relative overflow-hidden">
+
+        <div class="rounded-lg p-10 relative overflow-hidden testimonials style-v2"
+          style="background-image: url('/images/plx-quotes.jpg'); background-position: center; background-repeat: no-repeat;">
+
+          <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+
+          <div class="circle-animate"></div>
+          <div class="right-shape"></div>
+
+          <h1 class="text-2xl md:text-4xl text-white font-extrabold mb-6" data-aos="fade-up" data-aos-delay="200">
+            What Our Customers are Saying
+          </h1>
+
+
+          <div class="relative w-full max-w-3xl mx-auto overflow-hidden">
+            <div class="flex transition-transform duration-500 ease-in-out"
+              :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
+              <div v-for="(testimonial, index) in testimonials" :key="index" class="min-w-full p-6">
+                <div class="bg-transparent p-6 text-center">
+                  <p class=" text-gray-50 italic">“{{ testimonial.message }}”</p>
+                  <p class="mt-4 font-semibold text-white">— {{ testimonial.name }}</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <button
+              class="absolute top-1/2 left-7 transform -translate-y-1/2 bg-transparent text-white p-2 shadow rounded-full"
+              @click="prevSlide">
+              <img src="/images/icons/arrow-prev-w.png" alt="arrow-left" class="w-3 opacity-50 hover:opacity-95">
+            </button>
+            <button
+              class="absolute top-1/2 right-7 transform -translate-y-1/2 bg-transparent text-white p-2 shadow rounded-full"
+              @click="nextSlide">
+              <img src="/images/icons/arrow-next-w.png" alt="arrow-left" class="w-3 opacity-50 hover:opacity-95">
+            </button>
+          </div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+
   </div>
 </template>
 

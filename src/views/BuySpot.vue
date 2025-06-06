@@ -34,7 +34,7 @@
   </section>
 
 
-  <section class="h-screen flex items-center mt-40">
+  <section class="h-screen flex items-center mt-60 md:mt-0">
     <div class="container mx-auto px-4 sm:px-6 lg:px-20 my-20 text-center">
 
       <h1 class="text-4xl md:text-5xl text-gray-900 font-extrabold mb-6" data-aos="fade-up" data-aos-delay="200">
