@@ -24,7 +24,7 @@ const prevSlide = () => {
 }
 
 onMounted(() => {
-  interval = setInterval(nextSlide, 5000) // Auto slide every 5s
+  interval = setInterval(nextSlide, 5000) // Auto slide every 5s 
 })
 
 onBeforeUnmount(() => {
@@ -105,7 +105,7 @@ onBeforeUnmount(() => {
       <div class="container relative mx-auto px-4 sm:px-6 lg:px-20 my-10 text-center py-20" data-aos="fade-up"
         data-aos-duration="1000" id="business">
 
-        <div class="mb-20">
+        <div class="mb-20 mt-52 md:mt-0">
           <h1 class="text-4xl md:text-5xl font-extrabold mb-6 text-gray-800" data-aos="fade-up" data-aos-delay="400">
             Why Choose US
           </h1>
@@ -126,7 +126,7 @@ onBeforeUnmount(() => {
     </section>
 
 
-    <div class="relative overflow-hidden">
+    <div class="relative overflow-hidden mt-52 md:mt-0">
       <div class="bg-blue-shape"></div>
       <div class="container mx-auto px-4 sm:px-6 lg:px-20 my-20 text-center relative overflow-hidden">
 
@@ -167,12 +167,47 @@ onBeforeUnmount(() => {
             </button>
           </div>
 
-
-
-
         </div>
       </div>
     </div>
+
+
+    <section class="">
+      <div class="container relative mx-auto px-4 sm:px-6 lg:px-20 my-10 text-center py-20" data-aos="fade-up"
+        data-aos-duration="1000" id="business">
+
+        <div class="mb-5">
+          <h1 class="text-4xl md:text-5xl font-extrabold mb-6 text-gray-800" data-aos="fade-up" data-aos-delay="400">
+            Talk to Us!
+          </h1>
+
+          <p class="text-2xl mb-10" data-aos="fade-up" data-aos-delay="600">Let’s Strengthen Your Tech Strategy
+            Together.</p>
+          <p class="text-lg mb-20" data-aos="fade-up" data-aos-delay="600">Book your free 15-minute call to explore how
+            we can
+            help secure, automate, and grow your business with smart IT solutions.</p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
+
+            <div class="bg-white text-gray-700 p-2 rounded-2xl shadow-lg border border-white/5 text-center mb-20"
+              v-for="(item, index) in content.talktoUs" data-aos="zoom-in" :data-aos-delay="index * 300">
+              <img :src="item.image" alt="icon" class="mx-auto mb-4 w-20 h-20 object-contain" />
+              <h2 class="text-xl font-semibold mb-2">{{ item.title }}</h2>
+            </div>
+
+          </div>
+
+          <div class="relative overflow-hidden h-[85vh]">
+            <iframe src="https://calendly.com/tcaught25/30min" allow="payment" width="100%" height="600"
+              sandbox="allow-scripts allow-same-origin allow-forms" referrerpolicy="no-referrer-when-downgrade"
+              class="border-0 absolute top-0 bottom-0 left-0 right-0" style="width: 100%; height: 100%;">
+            </iframe>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
 
 
 
@@ -184,6 +219,6 @@ onBeforeUnmount(() => {
 .blob {
   width: 25%;
   aspect-ratio: 1;
-  clip-path: shape(from 81.49% 78.41%, curve to 73.04% 88.77% with 78.04% 83.90%, curve to 61.26% 95.95% with 68.04% 93.63%, curve to 47.96% 94.59% with 54.49% 98.27%, curve to 34.94% 89.91% with 41.43% 90.91%, curve to 22.27% 85.77% with 28.46% 88.91%, curve to 10.93% 77.45% with 16.09% 82.62%, curve to 7.34% 64.62% with 5.77% 72.29%, curve to 4.82% 50.21% with 8.90% 56.95%, curve to 4.55% 37.17% with 0.74% 43.48%, curve to 14.02% 26.86% with 8.36% 30.86%, curve to 23.88% 18.22% with 19.67% 22.86%, curve to 33.81% 10.60% with 28.09% 13.58%, curve to 46.07% 5.75% with 39.52% 7.61%, curve to 59.38% 5.26% with 52.62% 3.89%, curve to 71.11% 11.34% with 66.13% 6.63%, curve to 81.41% 20.02% with 76.09% 16.05%, curve to 91.47% 29.41% with 86.72% 23.99%, curve to 96.58% 41.99% with 96.21% 34.83%, curve to 94.45% 55.64% with 96.95% 49.16%, curve to 88.45% 67.52% with 91.95% 62.12%, curve to 81.49% 78.41% with 84.94% 72.91%);
+  clip-path: shape(from 81.49% 78.41%, curve to 73.04% 88.77% with 78.04% 83.90%, curve to 61.26% 95.95% with 68.04% 93.63%, curve to 47.96% 94.59% with 54.49% 98.27%, curve to 34.94% 89.91% with 41.43% 90.91%, curve to 22.27% 85.77% with 28.46% 88.91%, curve to 10.93% 77.45% with 16.09% 82.62%, curve to 7.34% 64.62% with 5.77% 72.29%, curve to 4.82% 50.21% with 8.90% 56.95%, curve to 4.55% 37.17% with 0.74% 43.48%, curve to 14.02% 26.86% with 8.36% 30.86%, curve to 23.88% 18.22% with 19.67% 22.86%, curve to 33.81% 10.60% with 28.09% 13.58%, curve to 46.07% 5.75% with 39.52% 7.61%, curve to 59.38% 5.26% with 52.62% 3.89%, curve to71.11% 11.34% with 66.13% 6.63%, curve to 81.41% 20.02% with 76.09% 16.05%, curve to 91.47% 29.41% with 86.72% 23.99%, curve to 96.58% 41.99% with 96.21% 34.83%, curve to 94.45% 55.64% with 96.95% 49.16%, curve to 88.45% 67.52% with 91.95% 62.12%, curve to 81.49% 78.41% with 84.94% 72.91%);
 }
 </style>

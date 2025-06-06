@@ -77,7 +77,7 @@ const content = {
     },
   ],
 
-   whyChooseUs: [
+  whyChooseUs: [
     {
       title: "Fast, friendly support with real people",
       image: "/images/icons/helpdesk.gif", // cloud upload icon
@@ -96,6 +96,20 @@ const content = {
     },
   ],
 
+  talktoUs: [
+    {
+      title: "Free, no-pressure consultation",
+      image: "/images/icons/consult.gif", // cloud upload icon
+    },
+    {
+      title: "Tailored advice based on your current tech setup",
+      image: "/images/icons/tailored.gif",
+    },
+    {
+      title: "Actionable next steps no jargon, just value",
+      image: "/images/icons/strategy.gif", // network/cloud icon
+    },
+  ],
 };
 
 export default content;
