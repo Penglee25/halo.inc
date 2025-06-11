@@ -38,7 +38,7 @@ onBeforeUnmount(() => {
 
     <section class="relative text-white overflow-hidden bg-[#f8f7fc]">
       <!-- Top Clip -->
-      <div class="relative box w-full h-[80vh] bg-[#2760e2]">
+      <div class="relative box w-full h-[100vh] bg-[#2760e2]">
         <div class="flex flex-col items-center justify-center px-6 text-center pt-20">
 
           <div class="relative border my-40">
@@ -61,7 +61,7 @@ onBeforeUnmount(() => {
         <div class="left-circles"></div>
         <div class="right-circles"></div>
 
-        <div class="text-center w-full flex justify-center" data-aos="zoom-in" data-aos-duration="3000">
+        <div class="text-center w-full flex justify-center">
           <a href="#business"
             class="flex flex-col w-20 items-center mt-10 animate-bounce text-white hover:text-blue-300">
             <svg xmlns="http://www.w3.org/2000/svg" class=" h-6 mb-1" fill="none" viewBox="0 0 24 24"
@@ -83,7 +83,7 @@ onBeforeUnmount(() => {
     </svg>
 
 
-    <section class="min-h-screen p-6">
+    <section class="min-h-screen p-6" id="business">
 
       <h1 class="text-4xl text-center md:text-5xl font-extrabold text-gray-800 mb-20" data-aos="fade-up"
         data-aos-delay="0">
@@ -101,28 +101,26 @@ onBeforeUnmount(() => {
 
     </section>
 
-    <section class="h-screen bg-white flex items-center">
-      <div class="container relative mx-auto px-4 sm:px-6 lg:px-20 my-10 text-center py-20" data-aos="fade-up"
-        data-aos-duration="1000" id="business">
+    <section class="min-h-screen bg-white p-6 flex items-center justify-center">
 
-        <div class="mb-20 mt-52 md:mt-0">
-          <h1 class="text-4xl md:text-5xl font-extrabold mb-6 text-gray-800" data-aos="fade-up" data-aos-delay="400">
-            Why Choose US
-          </h1>
-          <p class="text-lg" data-aos="fade-up" data-aos-delay="600">Your Success Is Our Business</p>
-        </div>
+      <div class="my-20">
+        <h1 class="text-4xl text-center md:text-5xl font-extrabold text-gray-800 mb-20" data-aos="fade-up"
+          data-aos-delay="0">
+          What we do
+        </h1>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-6xl mx-auto px-4">
 
-          <div class="bg-white text-gray-700 p-2 rounded-2xl shadow-lg border border-white/5 text-center"
-            v-for="(item, index) in content.whyChooseUs" data-aos="fade-left" :data-aos-delay="index * 300">
+
+          <div class="bg-white text-black p-6 rounded-2xl shadow-lg border border-white/10 text-center"
+            v-for="(item, index) in content.whyChooseUs" data-aos="zoom-in" :data-aos-delay="index * 300">
             <img :src="item.image" alt="icon" class="mx-auto mb-4 w-20 h-20 object-contain" />
-            <h2 class="text-xl font-semibold mb-2">{{ item.title }}</h2>
+            <p class="text-xl mb-2">{{ item.title }}</p>
           </div>
 
         </div>
-
       </div>
+
     </section>
 
 
@@ -181,15 +179,16 @@ onBeforeUnmount(() => {
             Talk to Us!
           </h1>
 
-          <p class="text-2xl mb-10" data-aos="fade-up" data-aos-delay="600">Let’s Strengthen Your Tech Strategy
+          <p class="text-lg md:text-2xl mb-10" data-aos="fade-up" data-aos-delay="600">Let’s Strengthen Your Tech
+            Strategy
             Together.</p>
           <p class="text-lg mb-20" data-aos="fade-up" data-aos-delay="600">Book your free 15-minute call to explore how
             we can
             help secure, automate, and grow your business with smart IT solutions.</p>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4 mb-10">
 
-            <div class="bg-white text-gray-700 p-2 rounded-2xl shadow-lg border border-white/5 text-center mb-20"
+            <div class="bg-white text-gray-700 p-2 rounded-2xl shadow-lg border border-white/5 text-center md:mb-20"
               v-for="(item, index) in content.talktoUs" data-aos="zoom-in" :data-aos-delay="index * 300">
               <img :src="item.image" alt="icon" class="mx-auto mb-4 w-20 h-20 object-contain" />
               <h2 class="text-xl font-semibold mb-2">{{ item.title }}</h2>

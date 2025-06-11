@@ -80,19 +80,19 @@ const content = {
   whyChooseUs: [
     {
       title: "Fast, friendly support with real people",
-      image: "/images/icons/helpdesk.gif", // cloud upload icon
+      image: "/images/icons/helpdesk.png", // cloud upload icon
     },
     {
       title: "Scalable solutions tailored to your business",
-      image: "/images/icons/scale.gif",
+      image: "/images/icons/scale.png",
     },
     {
       title: "Certified experts with years of experience",
-      image: "/images/icons/certificate.gif", // network/cloud icon
+      image: "/images/icons/license.png", // network/cloud icon
     },
     {
       title: "Proven track record of reducing downtime and costs",
-      image: "/images/icons/cost-effectiveness.gif",
+      image: "/images/icons/earning.png",
     },
   ],
 

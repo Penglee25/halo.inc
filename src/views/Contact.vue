@@ -9,7 +9,7 @@
       <div class="tringle-shape"></div>
       <div class="circle-animate" style="left: 15%; top: 25%"></div>
 
-      <div class="container flex flex-col justify-start text-center pt-32 px-36">
+      <div class="container flex flex-col justify-start text-center pt-32 px-10 md:px-36">
         <div class="w-full text-left">
 
           <div class="flex relative">
@@ -18,7 +18,7 @@
             <div class="ml-3">
               <h2 class="text-lg lg:text-3xl font-semibold mb-1">Contact us</h2>
               <nav aria-label="breadcrumb">
-                <ol class="flex flex-row lg:flex-wrap text-sm text-gray-600 space-x-2">
+                <ol class="flex flex-row lg:flex-wrap text-sm text-gray-600 w-40">
                   <li class="after:content-['/'] after:mx-2 last:after:content-none">
                     <a href="/home" class="text-white hover:underline">Home</a>
                   </li>
@@ -59,7 +59,7 @@
 
 
   <section class="h-screen flex items-center">
-    <div class="max-w-4xl mx-auto px-4 py-10">
+    <div class="max-w-4xl mx-auto px-4 py-10 mt-20">
       <p class="text-blue-600 uppercase tracking-wide text-md text-center mb-2">Let’s talk</p>
       <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Send Us a Message</h2>
       <p class="text-center text-gray-500 mb-10">We are always happy to talk with you. Be sure to write to us if you

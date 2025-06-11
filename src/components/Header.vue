@@ -63,8 +63,8 @@ onUnmounted(() => {
           <RouterLink to="/contact" class="hover:text-white text-[#fff]" active-class="active-text-navs">Contact
           </RouterLink>
         </li>
-        <RouterLink to="/buyspot" class="hover:text-white text-[#fff]" active-class="active-text-navs">💰 Buy a Spot 
-        </RouterLink>
+        <!-- <RouterLink to="/buyspot" class="hover:text-white text-[#fff]" active-class="active-text-navs">💰 Buy a Spot 
+        </RouterLink> -->
       </ul>
     </nav>
 
@@ -79,10 +79,10 @@ onUnmounted(() => {
           <RouterLink to="/contact" class="hover:text-white text-[#fff]" active-class="active-text-navs">Contact
           </RouterLink>
         </li>
-        <li>
+        <!-- <li>
           <RouterLink to="/buyspot" class="hover:text-white text-[#fff]" active-class="active-text-navs">Buy a Spot 💰
           </RouterLink>
-        </li>
+        </li> -->
       </ul>
     </transition>
   </header>
